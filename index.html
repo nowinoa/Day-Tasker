@@ -9,60 +9,81 @@
     
   </head>
   <body>
-    <header>
-      <h1 class="date-name">January, 19 2023</h1>
-      <h3 class="actual-time"></h3>
-    </header>
-
-    <main>
-      <ul class="timetable">
-        <li>
-          <p class="screen-time">02:00h</p>
-          <button class="save-btn" data-number="1">+</button>
-          <input type="text" name="task" class="task" data-number="1"/>
-        </li>
-        <li>
-          <p class="screen-time">01:00h</p>
-          <button class="save-btn" data-number="2">+</button>
-          <input type="text" name="task" class="task" data-number="2"/>
-        </li>
-        <li>
-          <p class="screen-time">11:00h</p>
-          <button class="save-btn" data-number="3">+</button>
-          <input type="text" name="task" class="task" data-number="3"/>
-        </li>
-        <li>
-          <p class="screen-time">12:00h</p>
-          <button class="save-btn" data-number="4">+</button>
-          <input type="text" name="task" class="task" data-number="4"/>
-        </li>
-        <li>
-          <p class="screen-time">13:00h</p>
-          <button class="save-btn" data-number="5">+</button>
-          <input type="text" name="task" class="task" data-number="5" />
-        </li>
-        <li>
-          <p class="screen-time">14:00h</p>
-          <button class="save-btn" data-number="6">+</button>
-          <input type="text" name="task" class="task" data-number="6"/>
-        </li>
-        <li>
-          <p class="screen-time">15:00h</p>
-          <button class="save-btn" data-number="7">+</button>
-          <input type="text" name="task" class="task" data-number="7" />
-        </li>
-        <li>
-          <p class="screen-time">16:00h</p>
-          <button class="save-btn" data-number="8">+</button>
-          <input type="text" name="task" class="task" data-number="8"/>
-        </li>
-        <li>
-          <p class="screen-time">17:00h</p>
-          <button class="save-btn" data-number="9">+</button>
-          <input type="text" name="task" class="task" data-number="9"/>
-        </li>
-      </ul>
-    </main>
+    <div class="container">
+        <header>
+            <h1 class="date-name">/h1>
+            <h3 class="actual-time"></h3>
+          </header>
+      
+          <main>
+            <ul class="timetable">
+              <li class="list-item">
+                <p class="screen-time">02:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="1"/>
+                  <button class="save-btn" data-number="1">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">01:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="2"/>
+                  <button class="save-btn" data-number="2">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">11:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="3"/>
+                  <button class="save-btn" data-number="3">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">03:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="4"/>
+                  <button class="save-btn" data-number="4">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">13:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="5" />
+                  <button class="save-btn" data-number="5">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">14:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="6"/>
+                  <button class="save-btn" data-number="6">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">15:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="7" />
+                  <button class="save-btn" data-number="7">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">16:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="8"/>
+                  <button class="save-btn" data-number="8">+</button>
+                </div>
+              </li>
+              <li class="list-item">
+                <p class="screen-time">17:00h</p>
+                <div class="tasker">
+                  <input type="text" name="task" class="task" data-number="9"/>
+                  <button class="save-btn" data-number="9">+</button>
+                </div>
+              </li>
+            </ul>
+          </main>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
