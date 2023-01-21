@@ -9,6 +9,11 @@ var screenTime = document.querySelectorAll('.screen-time');
 var doneBtn = $('.done-btn');
 var saved = false;
 
+//Set colors by time
+screenTime.forEach(p => {
+    timeCompararision(p)
+});
+
 //header
 //create date
 var now = moment();
@@ -17,11 +22,6 @@ dateName.text(now.format('dddd Do, MMM YYYY'));
 window.setInterval(function () {
     actualTime.html(moment().format('HH:mm:ss') + ' h');
 }, 1000);
-
-//Set colors by time
-screenTime.forEach(p => {
-    timeCompararision(p)
-});
 
 //main
 //for each btn clicked, bring the input with the same data-number to local storage
@@ -42,6 +42,8 @@ saveBtn.each( function (index) {
     })
 
 });
+
+//Functions
 function timeCompararision (element) {
     var momentToCheck = moment().format('HH') + ':00';
     //if the text is smaller than the actual time, then change bg
@@ -60,7 +62,6 @@ function timeCompararision (element) {
         element.style = 'background: #96E799;';
     }
 }
-
 //display done btn
 function displayDoneBtn (element) {
     var btn = element.data('number');
@@ -75,7 +76,7 @@ function displayDoneBtn (element) {
                     window.localStorage.removeItem(`task-${index}`);
                     window.localStorage.removeItem(`saved-${index}`);
                     var input = $(`input[data-number= ${index}]`);
-                    input.val('')
+                    input.val('');
                 })
               }))
         }
