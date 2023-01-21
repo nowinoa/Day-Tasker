@@ -13,14 +13,14 @@
     font-family: var(--font-fam);
 }
 body {
-    background: url('https://img.freepik.com/free-vector/potted-plant-doodle-vector-background_53876-126321.jpg?w=1060&t=st=1674088359~exp=1674088959~hmac=beef07c28136e913e890e2a092020156b28b61a0abb69faf28341664ed46f498');
+    background: url('https://img.freepik.com/vector-gratis/ilustracion-vector-fondo-textura-patron-naturaleza-organica-turing_1017-38418.jpg?w=1060&t=st=1674338227~exp=1674338827~hmac=3d7f384953826b8de9473bdb9b8acee605ad94cb22f13b4adae6eaa972214907');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .container{
     width: 100%;
     height: 180vh;
-    background-color: rgba(34, 34, 34, 0.808);
+    background-color: rgba(26, 26, 26, 0.952);
 }
 .active {
     transform: scale(1.1);
