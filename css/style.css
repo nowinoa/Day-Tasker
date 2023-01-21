@@ -1,14 +1,16 @@
 :root {
     --box-shadow: 3px 6px 3px rgba(48, 46, 46, 0.692),
                   4px 7px 4px rgba(48, 46, 46, 0.733);
-    --past-color: #D2D7D2;
+    --past-color: #b9beb9;
     --actual-color: #4FC754;
     --future-color: #96E799;
+    --font-fam: 'Roboto Slab', serif;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-fam);
 }
 body {
     background: url('https://img.freepik.com/free-vector/potted-plant-doodle-vector-background_53876-126321.jpg?w=1060&t=st=1674088359~exp=1674088959~hmac=beef07c28136e913e890e2a092020156b28b61a0abb69faf28341664ed46f498');
@@ -17,12 +19,12 @@ body {
 }
 .container{
     width: 100%;
-    height: 100%;
+    height: 180vh;
     background-color: rgba(34, 34, 34, 0.808);
 }
 .active {
-    scale: 1.3;
-    background-color: var(--actual-color);
+    transform: scale(1.1);
+    transition-duration: 1000ms;
 }
 h1, h3 {
     color: #fff;
@@ -31,13 +33,16 @@ h1, h3 {
 
 /* header */
 header {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 10px 20px 10px 20px;
-    margin: 10px 5px 10px 5px;
+    gap: 30px;
+    padding: 50px 20px 50px 20px;
+    border-bottom: 3px  solid #fff;
 }
 .date-name {
     font-size: 60px;
@@ -48,15 +53,17 @@ header {
 /* Main */
 .timetable {
     width: 60%;
-    margin: 0 auto;
+    height: 100%;
+    margin: 70px auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 .timetable li {
     height: 60px;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    gap: 50px;
 }
 .tasker {
     display: flex;
@@ -65,16 +72,17 @@ header {
 }
 .screen-time {
     display: flex;
+    height: auto;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px 10px 10px;
+    padding: 15px 15px 15px 15px;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     font-size: 20px;
     font-weight: 700;
 }
 .task {
-    height: 60px;
+    height: 80px;
     width: 100%;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
@@ -100,18 +108,73 @@ header {
 }
 
 @media(max-width: 768px) {
+    .container {
+        height: 190vh;
+    }
+    header {
+        width: 80%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     .date-name {
         font-size: 40px;
+        text-align: center;
+    }
+    .actual-time {
+        margin-bottom: 20px;
     }
     .timetable {
-        width: 90%;
-        margin: 0 auto;
+        width: 80%;
+        margin: 70px auto;
     }
 }
 @media(max-width: 480px) {
+    .container {
+        height: 180vh;
+    }
+    header {
+        width: 85%;
+        margin: 0 auto;
+        height: 250px;
+        padding: 40px 20px 20px 20px;
+    }
     .date-name {
-        font-size: 30px;
+        font-size: 40px;
         word-wrap: break-word;
-        text-align: center;
+    }
+    .actual-time {
+        font-size: 23px;
+    }
+    .timetable {
+        width: 85%;
+    }
+    .timetable li {
+        height: 60px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .tasker {
+        gap: 10px;
+        align-items: center;
+    }
+    .task {
+        height: 60px;
+    }
+    .save-btn {
+        width: 60px;
+        height: 50px;
+        padding: 6px 6px 6px 6px;
+    }
+    .screen-time {
+        padding: 10px 10px 10x 10px;
+        width: 60px;
+        font-size: 18px;
+    }
+    .active{
+        scale: 1.05;
     }
 }
