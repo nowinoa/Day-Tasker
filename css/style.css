@@ -63,12 +63,14 @@ header {
     height: 60px;
     display: flex;
     align-items: center;
-    gap: 50px;
 }
 .tasker {
     display: flex;
     width: 100%;
     gap: 20px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 15px;
 }
 .screen-time {
     display: flex;
@@ -92,19 +94,47 @@ header {
     font-weight: 500;
     background-color: var(--future-color);
 }
+
 .save-btn {
-    width: 60px;
-    height: 60px;
+    top: 20px;
+    right: 10px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    box-shadow: var(--box-shadow);
     font-size: 20px;
     color: #fff;
     background-color: #222;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
+}
+.done-btn{
+    opacity: 0;
+    cursor: none;
+    scale: 0.5;
+    color: #fff;
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #309433;
+    box-shadow: var(--box-shadow);
+
+}
+.active-done-btn {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(2);
+    transition-duration: 1000ms;
+    
+}
+.done-btn i {
+    font-size: 20px;
 }
 
 @media(max-width: 768px) {
@@ -164,17 +194,22 @@ header {
     .task {
         height: 60px;
     }
-    .save-btn {
+    /* .save-btn {
         width: 60px;
         height: 50px;
         padding: 6px 6px 6px 6px;
-    }
+    } */
     .screen-time {
         padding: 10px 10px 10x 10px;
         width: 60px;
         font-size: 18px;
     }
-    .active{
-        scale: 1.05;
+    .active {
+        transform: scale(1.08);
+    }
+    .save-btn {
+        top: 10px;
     }
 }
+
+
