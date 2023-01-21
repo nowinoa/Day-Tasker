@@ -20,7 +20,7 @@ body {
 .container{
     width: 100%;
     height: 180vh;
-    background-color: rgba(26, 26, 26, 0.952);
+    background-color: rgba(26, 26, 26, 0.904);
 }
 .active {
     transform: scale(1.1);
@@ -63,6 +63,7 @@ header {
     height: 60px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .tasker {
     display: flex;
@@ -73,6 +74,7 @@ header {
     margin-right: 15px;
 }
 .screen-time {
+    color: #222;
     display: flex;
     height: auto;
     justify-content: center;
@@ -113,6 +115,11 @@ header {
     border-radius: 100px;
     z-index: 2;
 }
+.save-btn:hover {
+    background-color: rgb(20, 20, 20);
+    cursor: pointer;
+    transition-duration: 600ms;
+}
 .done-btn{
     opacity: 0;
     cursor: none;
@@ -133,6 +140,10 @@ header {
     border-radius: 100px;
 
 }
+.done-btn:hover{
+    background-color: #236b25;
+    color: #222;
+}
 .active-done-btn {
     opacity: 1;
     cursor: pointer;
@@ -144,12 +155,12 @@ header {
     font-size: 20px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 820px) {
     .container {
         height: 190vh;
     }
     header {
-        width: 80%;
+        width: 90%;
         height: 300px;
         display: flex;
         flex-direction: column;
@@ -157,18 +168,17 @@ header {
         justify-content: space-evenly;
     }
     .date-name {
-        font-size: 40px;
+        font-size: 50px;
         text-align: center;
     }
     .actual-time {
         margin-bottom: 20px;
     }
     .timetable {
-        width: 80%;
-        margin: 70px auto;
+        width: 85%;
     }
 }
-@media(max-width: 480px) {
+@media(max-width: 570px) {
     .container {
         height: 180vh;
     }
@@ -186,12 +196,12 @@ header {
         font-size: 23px;
     }
     .timetable {
-        width: 85%;
+        width: 90%;
     }
     .timetable li {
+        width: 100%;
         height: 60px;
         display: flex;
-        gap: 10px;
         align-items: center;
     }
     .tasker {
@@ -201,8 +211,8 @@ header {
         margin-right: 0px;
     }
     .task {
-        height: 60px;
-        width: 230px;
+        width: 100%;
+        margin-right: 9px;
     }
     .screen-time {
         padding: 10px 10px 10x 10px;
@@ -213,7 +223,26 @@ header {
         transform: scale(1.08);
     }
     .save-btn {
-        top: 10px;
+        top: 30px;
+        right: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10px 12px 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .done-btn {
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10px 12px 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .done-btn i {
+        font-size: 14px;
     }
 }
 
