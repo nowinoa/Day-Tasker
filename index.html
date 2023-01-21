@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day Traker</title>
     <link rel="stylesheet" href="./css/style.css" />
+    
   </head>
   <body>
     <header>
-      <h1>January, 19 2023</h1>
-      <h3>19:00h</h3>
+      <h1 class="date-name">January, 19 2023</h1>
+      <h3 class="actual-time"></h3>
     </header>
 
     <main>
       <ul class="timetable">
         <li>
-          <p class="screen-time">09:00h</p>
+          <p class="screen-time">02:00h</p>
           <button class="save-btn" data-number="1">+</button>
           <input type="text" name="task" class="task" data-number="1"/>
         </li>
         <li>
-          <p class="screen-time">10:00h</p>
+          <p class="screen-time">01:00h</p>
           <button class="save-btn" data-number="2">+</button>
           <input type="text" name="task" class="task" data-number="2"/>
         </li>
@@ -62,7 +63,7 @@
         </li>
       </ul>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
   </body>
