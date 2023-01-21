@@ -33,16 +33,14 @@ function timeCompararision (element) {
     //if the text is smaller than the actual time, then change bg
     if(element.textContent < momentToCheck) {
        element.style = 'background: #222;';
+       var i = element.dataset.number;
+       $('list-item').eq(i).children(1).children(0).css({background: '#222'});
     } else if (element.textContent === momentToCheck) {
         element.classList.add('active');
     } else {
         element.style = 'background: lightblue;';
     }
 }
-//si el tiempo es mayor que el contenido entonces cambia el color a gris
-//si es el momento actual,scale y bg
-//si es futuro nada
-
 //main
 //for each btn clicked, bring the input with the same data-number to local storage
 saveBtn.each( function (index) {

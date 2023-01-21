@@ -1,4 +1,117 @@
+:root {
+    --box-shadow: 3px 6px 3px rgba(48, 46, 46, 0.692),
+                  4px 7px 4px rgba(48, 46, 46, 0.733);
+    --past-color: #D2D7D2;
+    --actual-color: #4FC754;
+    --future-color: #96E799;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('https://img.freepik.com/free-vector/potted-plant-doodle-vector-background_53876-126321.jpg?w=1060&t=st=1674088359~exp=1674088959~hmac=beef07c28136e913e890e2a092020156b28b61a0abb69faf28341664ed46f498');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.808);
+}
 .active {
     scale: 1.3;
-    background-color: aqua;
+    background-color: var(--actual-color);
+}
+h1, h3 {
+    color: #fff;
+}
+
+
+/* header */
+header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 5px 10px 5px;
+}
+.date-name {
+    font-size: 60px;
+}
+.actual-time {
+    font-size: 40px;
+}
+/* Main */
+.timetable {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.timetable li {
+    height: 60px;
+    display: flex;
+    gap: 40px;
+}
+.tasker {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.screen-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    font-size: 20px;
+    font-weight: 700;
+}
+.task {
+    height: 60px;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: var(--box-shadow);
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--future-color);
+}
+.save-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: var(--box-shadow);
+    font-size: 20px;
+    color: #fff;
+    background-color: #222;
+}
+
+@media(max-width: 768px) {
+    .date-name {
+        font-size: 40px;
+    }
+    .timetable {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 480px) {
+    .date-name {
+        font-size: 30px;
+        word-wrap: break-word;
+        text-align: center;
+    }
 }
