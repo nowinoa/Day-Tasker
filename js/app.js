@@ -19,28 +19,49 @@ var now = moment();
 dateName.text(now.format('dddd Do, MMM YYYY'));
 //actual time running
 window.setInterval(function () {
-    actualTime.html(moment().format('hh:mm:ss') + ' h');
+    actualTime.html(moment().format('HH:mm:ss') + ' h');
 }, 1000);
 
 //Set colors by time
-screenTime.forEach(p => { 
-    timeCompararision(p);
-    
+screenTime.forEach(p => {
+    timeCompararision(p)
+});
+
+( function () {
+    timeCompararision($(this));
+    var dataNumTime = $(this).data('number');
+    console.log(dataNumTime);
 });
 function timeCompararision (element) {
-    var momentToCheck = moment().format('hh') + ':00h';
-    console.log(momentToCheck);
+    var momentToCheck = moment().format('HH') + ':00';
     //if the text is smaller than the actual time, then change bg
+    var i = element.dataset.number;
+    var input = $(`input[data-number=${i}]`);
+    var li = element.parentElement;
     if(element.textContent < momentToCheck) {
-       element.style = 'background: #222;';
-       var i = element.dataset.number;
-       $('list-item').eq(i).children(1).children(0).css({background: '#222'});
+       element.style = 'background: #b9beb9;';
+       input.css('background', '#b9beb9');
     } else if (element.textContent === momentToCheck) {
-        element.classList.add('active');
+    //    element.parentElement.classList.add('active');
+       element.style = 'background : #4FC754';
+       input.css('background', '#4FC754');
+       li.classList.add('active');
+       
+       
+
     } else {
-        element.style = 'background: lightblue;';
+        element.style = 'background: #96E799;';
     }
 }
+function inputColor() {
+    task.each( function () {
+        let dataNum = $(this).data('number');
+    }
+        
+    )
+}
+inputColor();
+
 //main
 //for each btn clicked, bring the input with the same data-number to local storage
 saveBtn.each( function (index) {
