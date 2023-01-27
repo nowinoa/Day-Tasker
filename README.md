@@ -3,6 +3,9 @@
 ## Description
 The Day Task Tracker is an application that allows users to keep track of their tasks for the day. The application allows users to add tasks that are saved to local storage and provides a simple, easy-to-use interface. A "done" button will appear when a task is saved, which when clicked, will remove the task from local storage.
 
+https://nowinoa.github.io/Day-Tasker/
+
+
 ## Table of Contents
 - Installation
 - Usage
